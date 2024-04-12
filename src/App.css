@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Baloo+Tamma+2:wght@500&family=Roboto+Mono:wght@300&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(13, 13, 65);
+}
+
+img{
+    width: 300px;
+    height:400px;
+}
+
+
+.search-nav h1 {
+    color: white;
+}
+
+.poster{
+    background-color: rgb(5, 5, 143);
+    border-radius: 5px;
+}
+
+
+.poster h1{
+    font-size: 20px;
+}
+
+.card{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap ; 
+    text-align: center;
+    margin-top: 15px;
+    padding: 1rem;
+    color: white;
+}
+
+.btn-delete{
+    padding:0.4rem;
+    background-color: rgb(245, 13, 5);
+    color:white;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: Roboto,Arial, sans-serif;
+    margin-right: 35px;
+}
+.btn-edit{
+    padding:0.4rem;
+    background-color: rgb(3, 140, 252);
+    color:white;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: Roboto,Arial, sans-serif;
+    margin-right: 33px;
+    width: 50px;
+}
+
+.config{
+    margin-left: 10px;
+}
+
+.text{
+    padding:0.4rem;
+    border-radius: 5px;
+}
+
+.btn{
+    padding:0.4rem;
+    border-radius: 5px;
+}
+
+.btn2{
+    padding:0.4rem;
+    border-radius: 5px;
+}
+
+.search{
+    text-align: center;
+}
+
+.btnadd{
+    margin-left:848px;
+    position: relative;
+    bottom:71px;
+    padding: 0.4rem;
+    border-radius: 5px;
+}
