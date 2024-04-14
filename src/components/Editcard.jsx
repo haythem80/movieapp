@@ -27,7 +27,7 @@ Modal.setAppElement("#root");
     const editedMovie = {
       id: movie.id,
       name,
-      image,
+      img:image,
       rating,
       
     };
@@ -37,7 +37,8 @@ Modal.setAppElement("#root");
     setRating(1);
     setName("");
   };
-  function openModal() {
+  function openModal(e) {
+    e.preventDefault();
     setIsOpen(true);
   }
 

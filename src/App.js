@@ -4,6 +4,7 @@ import Movielist from './components/Movielist';
 import { moviesData } from './data';
 import Search from './components/Search';
 import Addnewmovie from './components/Addnewmovie';
+import Typewriter from 'typewriter-effect';
 
 
 function App() {
@@ -19,7 +20,15 @@ function App() {
   
   return (
     <div className="App">
-
+    <div className="writer" style={{color:'white'}}>
+    <Typewriter
+    options={{
+      strings: ['Top Movie'],
+      autoStart: true,
+      loop: true,
+    }}
+    />
+    </div>
         <Search  searchText={searchText} handleSearchText={handleSearchText} rating={rating} handleRating={handleRating}/>
         <Addnewmovie handleadd={handleadd} />
         <Movielist 

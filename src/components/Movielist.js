@@ -3,9 +3,9 @@ import Moviecard from './Moviecard'
 
 const Movielist = ({film , deletefunction,handleEdit}) => {
   return (
-    <div>
+    <div className='card'>
     {
-        React.Children.toArray(film.map(el=> <Moviecard list={el} functiondelete={deletefunction} handleEdit={handleEdit={handleEdit}} /> ))
+        React.Children.toArray(film.map(el=> <Moviecard list={el} functiondelete={deletefunction} handleEdit={handleEdit}/> ))
     }
     </div>
   )

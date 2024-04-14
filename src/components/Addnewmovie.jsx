@@ -27,7 +27,7 @@ Modal.setAppElement("#root");
     const newMovie = {
       id: Math.random(),
       name,
-      image,
+      img:image,
       rating,
       
     };

@@ -3,6 +3,10 @@ import StarRating from './StarRating'
 import Editcard from './Editcard'
 
 const Moviecard = ({list , functiondelete ,handleRating,handleEdit}) => {
+  const handleSubmit=e=>{
+    e.preventDefault();
+    functiondelete(list.id)
+  }
   
   return (
     <div className='card'>
@@ -11,7 +15,7 @@ const Moviecard = ({list , functiondelete ,handleRating,handleEdit}) => {
     <img src={list.img} alt="img"/>
     <StarRating rating={list.rating} handleRating={handleRating} />
     <form className='config' >
-    <button className='btn-delete' onClick={() => functiondelete(list.id)}>
+    <button className='btn-delete' onClick={handleSubmit}>
     Delete
     </button>
     <Editcard movie={list} handleEdit={handleEdit} />
