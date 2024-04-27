@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(13, 13, 65);
-}
-
 img{
     width: 300px;
     height:400px;
@@ -16,8 +12,21 @@ img{
 
 .writer{
     font-size: 40px;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 10px;
+    margin-left: 10px;
+    display:flex;
+}
+
+.liste{
+    list-style: none;
+    display:flex;
+    margin-left: 700px;
+    position: absolute;
+    justify-content: space-evenly;
+    color : white;
+
+    
 }
 
 
@@ -94,5 +103,32 @@ img{
     position: relative;
     bottom:71px;
     padding: 0.4rem;
+    border-radius: 5px;
+}
+
+.content{
+    display:flex;
+    justify-content: space-around;
+    height: 400px;
+}
+
+.syno{
+    color:white;
+    margin-top: 10px;
+    font-family: Roboto,Arial,sans-serif;
+    text-align: center;
+    background-color: rgb(92, 89, 89);
+    border-radius: 10px;
+}
+
+.syno h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inf{
+    padding: 0.4rem;
+    margin-bottom: 10px;
+    background-color: rgb(157, 229, 157);
     border-radius: 5px;
 }

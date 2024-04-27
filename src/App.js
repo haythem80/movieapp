@@ -4,7 +4,9 @@ import Movielist from './components/Movielist';
 import { moviesData } from './data';
 import Search from './components/Search';
 import Addnewmovie from './components/Addnewmovie';
-import Typewriter from 'typewriter-effect';
+import Navebar from './components/Navebar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Info from './components/Info';
 
 
 function App() {
@@ -19,23 +21,22 @@ function App() {
   const handleadd = (newone) => setMovie([...movie,newone]);
   
   return (
+    <Router>
     <div className="App">
-    <div className="writer" style={{color:'white'}}>
-    <Typewriter
-    options={{
-      strings: ['Top Movie'],
-      autoStart: true,
-      loop: true,
-    }}
-    />
-    </div>
-        <Search  searchText={searchText} handleSearchText={handleSearchText} rating={rating} handleRating={handleRating}/>
-        <Addnewmovie handleadd={handleadd} />
-        <Movielist 
-        film={movie.filter((el)=>el.name.toUpperCase().includes(searchText.toUpperCase()) && el.rating >= rating)} 
-        deletefunction={handleDelete} handleEdit={handleEdit}/>
-        
-    </div>
+    <Navebar/>
+    <Search  searchText={searchText} handleSearchText={handleSearchText} rating={rating} handleRating={handleRating}/>
+      <Addnewmovie handleadd={handleadd} />
+    <div className='content'>
+    <Routes>
+      <Route path="/" element={<Movielist 
+      film={movie.filter((el)=>el.name.toUpperCase().includes(searchText.toUpperCase()) && el.rating >= rating)} 
+      deletefunction={handleDelete} handleEdit={handleEdit}/>} />
+      <Route path="/info/:id" element={<Info film={movie}/>}/>
+      </Routes>
+      </div>
+      
+      </div>
+      </Router>
   );
 }
 

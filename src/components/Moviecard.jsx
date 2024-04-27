@@ -1,6 +1,7 @@
 import React from 'react'
 import StarRating from './StarRating'
 import Editcard from './Editcard'
+import { Link } from 'react-router-dom'
 
 const Moviecard = ({list , functiondelete ,handleRating,handleEdit}) => {
   const handleSubmit=e=>{
@@ -19,6 +20,9 @@ const Moviecard = ({list , functiondelete ,handleRating,handleEdit}) => {
     Delete
     </button>
     <Editcard movie={list} handleEdit={handleEdit} />
+    <Link to={`/info/${list.id}`}>
+    <button variant='info' className='inf'>More information</button>
+    </Link>
     </form>
     </div>
     </div>
